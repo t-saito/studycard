@@ -1,0 +1,2 @@
+module StudycardsHelper
+end
