@@ -9,9 +9,7 @@ class ApplicationController < ActionController::Base
 
   def auth
     authenticate_or_request_with_http_basic('Administration') { |username, password|
-      username == 'study' && password == 'card'
+      username == ENV['BASIC_AUTH_USER'] && password == ENV['BASIC_AUTH_PASS']
     }
   end
-
-
 end
