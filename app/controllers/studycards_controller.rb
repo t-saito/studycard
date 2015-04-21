@@ -1,5 +1,5 @@
 class StudycardsController < ApplicationController
   def index
-    @cards = Card.all
+    @cards = Card.order(updated_at: desc)
   end
 end
